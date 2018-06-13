@@ -4,6 +4,15 @@ import React from 'react';
 
 require('styles/components/Table.scss');
 
+// Import table data
+const users = require('json-loader!../../data/users.json');
+
+const userTotal = Object.keys(users).length;
+
+for (var count = 0; count <= userTotal; count++) {
+  console.log('User is: ', users[count]);
+}
+
 class TableComponent extends React.Component {
   render() {
     return (
