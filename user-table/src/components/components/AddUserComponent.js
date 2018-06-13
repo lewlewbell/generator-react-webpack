@@ -2,13 +2,13 @@
 
 import React from 'react';
 
-require('styles/components/AddUser.css');
+require('styles/components/AddUser.scss');
 
 class AddUserComponent extends React.Component {
   render() {
     return (
-      <div className="adduser-component">
-        Please edit src/components/components//AddUserComponent.js to update this component!
+      <div className="add-user-dialog">
+        Add new user dialog
       </div>
     );
   }

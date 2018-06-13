@@ -3,7 +3,9 @@ require('styles/components/App.scss');
 
 import React from 'react';
 
-let yeomanImage = require('../images/yeoman.png');
+import TableControlsComponent from '../components/components/TableControlsComponent';
+import TableComponent from '../components/components/TableComponent';
+import AddUserDialog from '../components/components/AddUserComponent';
 
 class AppComponent extends React.Component {
   render() {
@@ -17,31 +19,9 @@ class AppComponent extends React.Component {
         </header>
 
         <main className="main-content">
-          <section className="table-controls">
-            <button aria-label="Add player to list">Add Player</button>
-          </section>
-          <table className="table" aria-label="Table of users">
-            <thead>
-              <tr>
-                <th className="th1" scope="col"></th>
-                <th scope="col">First Name</th>
-                <th scope="col">Surname</th>
-                <th scope="col">Sex</th>
-                <th scope="col">Tier</th>
-                <th scope="col">Email</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Fred</td>
-                <td>Redwood</td>
-                <td className="td-sex td-sex--male"><img src="images/icon_male.svg" alt="Male" /></td>
-                <td className="td-tier td-tier--gold"><img src="images/tier_gold.svg" alt="Gold" /></td>
-                <td><a href="mailto:fred@gmail.com">fred@gmail.com</a></td>
-              </tr>
-            </tbody>
-          </table>
+          <TableControlsComponent />
+          <TableComponent />
+          <AddUserDialog />
         </main>
       </div>
     );

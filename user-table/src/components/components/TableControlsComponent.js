@@ -2,16 +2,12 @@
 
 import React from 'react';
 
-require('styles/components/TableControls.css');
-
-class TableControlsComponent extends React.Component {
-  render() {
-    return (
-      <div className="tablecontrols-component">
-        Please edit src/components/components//TableControlsComponent.js to update this component!
-      </div>
-    );
-  }
+function TableControlsComponent() {
+  return (
+    <section className="table-controls">
+      <button aria-label="Add player to list">Add Player</button>
+    </section>
+  );
 }
 
 TableControlsComponent.displayName = 'ComponentsTableControlsComponent';
