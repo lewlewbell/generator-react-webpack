@@ -13,6 +13,9 @@ body {
 
 a { color: $text-standard-colour; }
 
+.show-dialog { display: block; }
+.hide-dialog { display: none; }
+
 .application {
     width: 100%;
     max-width: 1155px;
@@ -52,6 +55,10 @@ a { color: $text-standard-colour; }
             display: flex; // Flex the table controls and table
             padding: $spacer;
         }
+    }
+
+    .tablecontrols-component {
+        border: 1px dashed #f00;
     }
 
     .table-controls {

@@ -23,8 +23,6 @@ for (var count = 1; count <= userTotal; count++) {
   );
 }
 
-console.log(userData);
-
 function TableComponent() {
   return (
     <table className="table" aria-label="Table of users">

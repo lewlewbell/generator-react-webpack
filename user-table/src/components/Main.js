@@ -2,12 +2,21 @@ require('styles/bootstrap.css');
 require('styles/components/App.scss');
 
 import React from 'react';
-
-import TableControlsComponent from '../components/components/TableControlsComponent';
 import TableComponent from '../components/components/TableComponent';
 import AddUserDialog from '../components/components/AddUserComponent';
 
 class AppComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showDialog: false
+    }
+  }
+
+  showAddUserDialog = function() {
+    this.setState({ showDialog: true })
+  }
+
   render() {
     return (
       <div className="application">
@@ -19,16 +28,17 @@ class AppComponent extends React.Component {
         </header>
 
         <main className="main-content">
-          <TableControlsComponent />
+          <section className="table-controls">
+            <button onClick={this.showAddUserDialog} aria-label="Add player to list">Add Player</button>
+          </section>
           <TableComponent />
-          <AddUserDialog />
+          <div className={this.state.showDialog ? 'show-dialog' : 'hide-dialog'}>
+            <AddUserDialog />
+          </div>
         </main>
       </div>
     );
   }
 }
-
-AppComponent.defaultProps = {
-};
 
 export default AppComponent;
